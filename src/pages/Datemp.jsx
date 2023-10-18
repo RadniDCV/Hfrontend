@@ -7,17 +7,18 @@ function Datemp() {
 
     useEffect(()=>{
         axios
-        .get("https://hbackend.vercel.app/detemp")
+        .get("/detemp")
         .then((res)=>{
             if(res.data.Status === "Success"){
                 setEmployee(res.data.Result)
                 console.log(res.data.Result)
             } else{
                 console.log("Error", res.data)
+                console.log(res.data.Result)
             }
         })
         .catch((err)=>console.log(err))
-    })
+    },[])
 
   return (
     <div>
@@ -29,8 +30,8 @@ function Datemp() {
             </thead>
             <tbody>
                 {employee.map((item, index)=>(
-                    <tr key="index">
-                        <td>{item.firstname}</td>
+                    <tr key={index}>
+                        <td>{item.empid}</td>
                     </tr>
                 ))}
             </tbody>
