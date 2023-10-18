@@ -23,12 +23,12 @@ function Datemp() {
         <Table>
             <thead>
                 <tr>
-                    <th>Codigo</th>
+                    <th>Codigo:</th>
                 </tr>
             </thead>
             <tbody>
                 {employee.map((item, index)=>(
-                    <tr key={index}>
+                    <tr key="index">
                         <td>{item.empid}</td>
                     </tr>
                 ))}
