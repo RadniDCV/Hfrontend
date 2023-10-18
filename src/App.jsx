@@ -1,12 +1,16 @@
-
-import './App.css'
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Datemp from "./pages/Datemp"
 
 function App() {
 
 
   return (
     <div>
-      Prueba
+      <BrowserRouter>
+        <Routes>
+          <Route path="/employee" element={<Datemp/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
