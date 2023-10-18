@@ -11,6 +11,7 @@ function Datemp() {
         .then((res)=>{
             if(res.data.Status === "Success"){
                 setEmployee(res.data.Result)
+                console.log(res.data.Result)
             } else{
                 console.log("Error", res.data)
             }
@@ -29,7 +30,7 @@ function Datemp() {
             <tbody>
                 {employee.map((item, index)=>(
                     <tr key="index">
-                        <td>{item.empid}</td>
+                        <td>{item.firstname}</td>
                     </tr>
                 ))}
             </tbody>
