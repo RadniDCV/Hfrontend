@@ -7,7 +7,7 @@ function Datemp() {
 
     useEffect(()=>{
         axios
-        .get("/detemp")
+        .get("https://hbackend.vercel.app/detemp")
         .then((res)=>{
             if(res.data.Status === "Success"){
                 setEmployee(res.data.Result)
