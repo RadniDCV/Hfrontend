@@ -2,7 +2,7 @@ import React from 'react'
 
 function Datemp() {
   return (
-    <div>Datemp</div>
+    <div>Prueba</div>
   )
 }
 
