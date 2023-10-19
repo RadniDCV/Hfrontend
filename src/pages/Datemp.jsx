@@ -5,10 +5,11 @@ import Table from "react-bootstrap/Table"
 
 function Datemp() {
     const [employee , setEmployee] = useState([]);
+    
 
 
     useEffect(()=>{
-        axios
+        axios.defaults.withCredentials = true
         .get(`https://hbackend.vercel.app/detemp`)
         .then((res)=>{
             if(res.data.Status === "Success"){
@@ -22,7 +23,7 @@ function Datemp() {
         .catch((err)=>console.log(err, "Prueba")
         
         )
-    },[])
+    },[apiUrl])
 
   return (
     <div>
