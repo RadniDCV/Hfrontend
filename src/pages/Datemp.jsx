@@ -44,6 +44,9 @@ function Datemp() {
                 <tr>
                     <th>Codigo</th>
                     <th>Nombre</th>
+                    <th>cedula</th>
+                    <th>Departamento</th>
+                    <th>Sucursal</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,7 +54,9 @@ function Datemp() {
                     <tr key={index}>
                         <td>{item.empid}</td>
                         <td>{item.firstname} {item.middlename} {item.lastname} {item.lastname2}</td>
-                        
+                        <td>{item.ci}</td>
+                        <td>{item.dept}</td>
+                        <td>{item.branch}</td>
                     </tr>
                 ))}
             </tbody>
