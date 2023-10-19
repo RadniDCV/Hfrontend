@@ -9,7 +9,7 @@ function Datemp() {
 
 
     useEffect(()=>{
-        axios.defaults.withCredentials = true
+        axios
         .get(`https://hbackend.vercel.app/detemp`)
         .then((res)=>{
             if(res.data.Status === "Success"){
