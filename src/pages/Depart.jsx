@@ -1,24 +1,23 @@
-import { useState, useEffect } from 'react'
-import axios from "axios"
-import Table from "react-bootstrap/Table"
-
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Table from "react-bootstrap/Table";
 
 function Depart() {
   const [dept, setDept] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     axios
-    .get(`https://hbackend.vercel.app/depart`)
-    .then((res)=>{
-        if(res.data.Status === "Success"){
-            setDept(res.data.Result)
-            console.log(res.data.Result)
-        } else{
-            console.log("Error", res.data)
-            console.log(res.data.Result)
+      .get(`https://hbackend.vercel.app/depart`)
+      .then((res) => {
+        if (res.data.Status === "Success") {
+          setDept(res.data.Result);
+          console.log(res.data.Result);
+        } else {
+          console.log("Error", res.data);
+          console.log(res.data.Result);
         }
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         if (error.response) {
           // La solicitud fue hecha y el servidor respondió con un código de estado que no está en el rango 2xx
           console.log("Respuesta del servidor:", error.response.data);
@@ -31,28 +30,27 @@ function Depart() {
           // Ocurrió un error durante la configuración de la solicitud
           console.log("Error de configuración de la solicitud:", error.message);
         }
-    }
-    )
-},[])
+      });
+  }, []);
 
   return (
     <div>
-    <Table>
-      <thead>
-        <tr>
-          <th>Departamento</th>
-        </tr>
-      </thead>
-      <tbody>
-      {dept.map((item, index)=>(
-                    <tr key={index}>
-                        <td>{item.details}</td> 
-                    </tr>
-      ))}
-      </tbody>
-    </Table>
+      <Table>
+        <thead>
+          <tr>
+            <th>Departamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          {dept.map((item, index) => (
+            <tr key={index}>
+              <td>{item.details}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </div>
-  )
+  );
 }
 
-export default Depart
+export default Depart;
