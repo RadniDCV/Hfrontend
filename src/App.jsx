@@ -2,7 +2,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Datemp from "./pages/Datemp"
 import Home from "./pages/Home"
-
+import Depart from "./pages/Depart"
 function App() {
 
 
@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/empleados" element={<Datemp/>}></Route>
+          <Route path="/depart" element={<Depart/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

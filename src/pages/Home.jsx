@@ -6,6 +6,8 @@ function Home() {
     <div>Home
     <hr/>
     <Link to="/empleados">Empleados</Link>
+    <hr/>
+    <Link to="/depart">Departamentos</Link>
     </div>
   )
 }
