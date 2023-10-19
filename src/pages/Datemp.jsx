@@ -42,13 +42,16 @@ function Datemp() {
         <Table>
             <thead>
                 <tr>
-                    <th>Codigo:</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
                 </tr>
             </thead>
             <tbody>
                 {employee.map((item, index)=>(
                     <tr key={index}>
                         <td>{item.empid}</td>
+                        <td>{item.firstname} {item.middlename} {item.lastname} {item.lastname2}</td>
+                        
                     </tr>
                 ))}
             </tbody>
