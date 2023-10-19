@@ -36,7 +36,7 @@ function Depart() {
 },[])
 
   return (
-    <div>Departamentos
+    <div>
     <Table>
       <thead>
         <tr>
