@@ -35,7 +35,7 @@ function Datemp() {
             </thead>
             <tbody>
                 {employee.map((item, index)=>(
-                    <tr key={index}>
+                    <tr key="index">
                         <td>{item.empid}</td>
                     </tr>
                 ))}
