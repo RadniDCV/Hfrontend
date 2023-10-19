@@ -39,7 +39,7 @@ function Datemp() {
 
   return (
     <div>
-        <Table>
+        <Table bordered>
             <thead>
                 <tr>
                     <th>Codigo</th>
