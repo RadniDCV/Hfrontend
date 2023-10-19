@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import axios from "axios"
 import Table from "react-bootstrap/Table"
 
@@ -19,7 +19,9 @@ function Datemp() {
                 console.log(res.data.Result)
             }
         })
-        .catch((err)=>console.log(err))
+        .catch((err)=>console.log(err, "Prueba")
+        
+        )
     },[])
 
   return (
