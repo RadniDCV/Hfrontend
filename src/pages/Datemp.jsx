@@ -23,7 +23,7 @@ function Datemp() {
         .catch((err)=>console.log(err, "Prueba")
         
         )
-    },[apiUrl])
+    },[])
 
   return (
     <div>
